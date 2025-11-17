@@ -14,5 +14,5 @@ mv kops-linux-amd64 /usr/local/bin/kops
 aws s3api create-bucket --bucket batheiah18g7.k8s.local --region us-east-1
 aws s3api put-bucket-versioning --bucket batheiah18g7.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
 export KOPS_STATE_STORE=s3://batheiah18g6.k8s.local
-kops create cluster --name batheiah6.k8s.local --zones us-east-1a --control-plane-image ami-03695d52f0d883f65 --control-plane-count=1 --control-plane-size t2.micro --image ami-03695d52f0d883f65 --node-count=2 --node-size t2.micro
+kops create cluster --name batheiah6.k8s.local --zones us-east-1a --control-plane-image ami-0cae6d6fe6048ca2c --control-plane-count=1 --control-plane-size t2.micro --image ami-0cae6d6fe6048ca2c --node-count=2 --node-size t2.micro
 kops update cluster --name batheiah6.k8s.local --yes --admin
